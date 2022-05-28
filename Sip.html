@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOAN_EMI</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="loan_calc.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body >
+    <header>
+
+        <a href="#" class="logo"><span>Gro</span>Ww</a>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
+
+        <nav class="navbar">
+            <a href="./#home">home</a>
+            <a href="./#about">about</a>
+            <a href="./#calculator">Calculator</a>
+            <a href="./#contact">contact</a>
+            <a href="sign.html"><i class="fas fa-user"></i></a>
+        </nav>
+
+    </header>
+    <div class="loan-calculator" ng-app="">
+        <div class="top">
+            <h2>SIP </h2>
+            <form action="#">
+                <div class="group">
+                    <div class="title">Monthly Investment</div>
+                    <input type="text"  value="20000" class="loan-amount" />
+                </div>
+                <div class="group">
+                    <div class="title">Return Rate</div>
+                    <input type="text" value="7.5" class="interest-rate" />
+                </div>
+                <div class="group">
+                    <div class="title">Tenure (in month)</div>
+                    <input type="text"  value="120" class="loan-tenure" />
+                </div>
+            </form>
+        </div>
+
+        <div class="result">
+            <div class="left">
+                <div class="loan-emi">
+                    <h3>Invested Amount</h3>
+                    <div class="value">123</div>
+                </div>
+                <div class="total-interest">
+                    <h3>Estimated Returns</h3>
+                    <div class="value">1234</div>
+                </div>
+                <div class="total-amount">
+                    <h3>Total value</h3>
+                    <div class="value">1234</div>
+                </div>
+                <button class="btn">Calculate</button>
+            </div>
+            <div class="right">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script> 
+    <script src="Sip.js"></script>
+</body>
+
+</html>

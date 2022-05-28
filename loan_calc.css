@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --purple:#814096;
+    --pink:#F83292;
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border:none;
+    text-transform: capitalize;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding:.4rem 2rem;
+    border-radius: 4.5rem;
+    background:var(--gradient);
+    font-size: 1.2rem;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.loan-calculator{
+    font-family: 'Poppins', sans-serif;
+    width: 600px;
+    margin: 127px auto;
+    background: #fff;
+    box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #333444;
+    overflow: hidden;
+}
+.loan-calculator,.loan-calculator *{
+    box-sizing: border-box;
+}
+.loan-calculator .top{
+    background: var(--gradient);
+    color: #fff;
+    padding: 32px;
+}
+.loan-calculator .top h2{
+    margin-top: 0;
+    font-size: 28px;
+}
+.loan-calculator form{
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+.loan-calculator .title{
+    margin-bottom:16px ; 
+    font-size: 15px;   
+}
+.loan-calculator form input{
+    border-radius: 6.5px;
+    font-size:20px;
+    padding: 8px 24px;
+    width: 100%;
+}
+.loan-calculator .result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.loan-calculator .result .left{
+    width: 100%;
+    padding: 8px 32px;
+}
+.loan-calculator .left h3{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.loan-calculator .result .value{
+    font-size: 25px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(20, 33, 61, 0.2);
+}
+.loan-calculator .result .value::before{
+    content: "$";   
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 6px;
+    opacity: 0.4;
+}
+
+.loan-calculator .right{
+    width: 50%;
+}
+
+@media(max-width:650px){
+    .loan-calculator{
+        width: 90%;
+        max-width: 500px;
+    }
+    .loan-calculator form{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .loan-calculator .result{
+        flex-direction: column;
+        text-align: center;
+    }
+}
